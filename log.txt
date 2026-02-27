@@ -12,3 +12,5 @@
 1772188911487: /favicon.ico: New request received
 1772188915892: /contact-us: New request received
 1772188916502: /favicon.ico: New request received
+1772189266778: /about?myname=tanzeela: New request received
+1772189266869: /favicon.ico: New request received

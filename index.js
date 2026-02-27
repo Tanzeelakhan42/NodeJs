@@ -1,6 +1,8 @@
 const http = require("http");
 const fs = require("fs");
+const url = require("url");
 const myServer = http.createServer((req, res) => {
+  if (req.url === "/favicon.ico") return res.end();
   const log = `${Date.now()}: ${req.url}: New request received\n`;
   fs.appendFile("log.txt", log, (err, data) => {
     switch (req.url) {
@@ -19,5 +21,3 @@ const myServer = http.createServer((req, res) => {
 myServer.listen(9000, () => {
   console.log("Server started");
 });
-//
-//Implement basic URL routing using switch case
