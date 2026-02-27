@@ -17,7 +17,10 @@ const myServer = http.createServer((req, res) => {
         console.log(userName);
         res.end(`Hello from ${userName}`);
         break;
-
+      case "/search":
+        const search = myUrl.query.search_query;
+        res.end(`Here are your results for ${search}`);
+        break;
       default:
         res.end("404 not found");
     }
